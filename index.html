@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main class="container">
         <header class="container">
@@ -46,15 +48,22 @@
             </div>
         </article>
         <article class="distance container">
-            <label for="dist">Расстояние <input type="number" class="dist-numInput select-target" id="dist-numInput" min="10" max="10000"> км</label>
+            <label for="dist">Расстояние <input type="number" class="dist-numInput select-target" id="dist-numInput"
+                    min="10" max="10000"> км</label>
             <input type="range" name="dist" id="dist" min="10" max="10000" step="10">
         </article>
         <article class="price container">
-            <p><span class="price__total">0.0</span>₽</p>
-            <button class="btn" id="btn">Считать</button>
+            <div class="price-cont">
+                <p><span class="price__total">0.0</span>₽</p>
+                <button class="btn" id="btn">Считать</button>
+            </div>
+            <div class="clear-cont">
+                <button class="clear-btn">Очистить</button>
+            </div>
         </article>
     </main>
     <br>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

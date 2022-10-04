@@ -15,6 +15,7 @@ const script = () => {
     const dist = document.getElementById("dist");
     const btn = document.getElementById("btn");
     const price_total = document.querySelector(".price__total");
+    const clear_btn = document.querySelector(".clear-btn");
 
     dist_numInput.value = 500;
     dist.value = 500;
@@ -29,47 +30,60 @@ const script = () => {
 
 
     btn.addEventListener("click", () => {
-        if (
-            weight.value != "" &&
-            weight.value >= 0 && 
-            volume.value != "" &&
-            volume.value >= 0
-        ) {
-          if (load.checked) {
-            cost_loading = 1500;
-          }
-          else {
-            cost_loading = 0;
-          }
-          if (del.checked) {
-            cost_delToPlace = 3500;
-          }
-          else {
-            cost_delToPlace = 0;
-          }
-          if (frag.checked) {
-            cost_fragile = 2000;
-          }
-          else {
-            cost_fragile = 0;
-          }
-
-          console.log(weight);
-          console.log(volume);
-
-          var sum =
-            weight.value * cost_1kg +
-            volume.value * cost_1cube +
-            cost_loading +
-            cost_delToPlace +
-            cost_fragile +
-            dist.value * cost_1km;
-            console.log(sum);
-          price_total.innerHTML = sum;
-        } else {
-          alert("Введите вес и объем груза");
-        }
+      if (weight.value != "" &&
+          weight.value > 0 && 
+          weight.value <= 50000 &&
+          volume.value != "" &&
+          volume.value > 0 &&
+          volume.value <= 10000) 
+      {
+        calculation();
+      } 
+      else 
+      {
+        alert("Введите вес (от 0 до 50.000) и объем груза (от 0 до 10.000)");
+      }
     });
+    
+    clear_btn.addEventListener("click", () => {
+      weight.value = "";
+      volume.value = "";
+      load.checked = false;
+      del.checked = false;
+      frag.checked = false;
+      dist_numInput.value = 500;
+      dist.value = 500;
+      price_total.innerHTML = "0.0";
+    });
+
+    const calculation = () => {
+      if (load.checked) {
+        cost_loading = 1500;
+      }
+      else {
+        cost_loading = 0;
+      }
+      if (del.checked) {
+        cost_delToPlace = 3500;
+      }
+      else {
+        cost_delToPlace = 0;
+      }
+      if (frag.checked) {
+        cost_fragile = 2000;
+      }
+      else {
+        cost_fragile = 0;
+      }
+      var sum =
+        weight.value * cost_1kg +
+        volume.value * cost_1cube +
+        cost_loading +
+        cost_delToPlace +
+        cost_fragile +
+        dist.value * cost_1km;
+      price_total.innerHTML = sum;
+    };
 }
 
 script();
