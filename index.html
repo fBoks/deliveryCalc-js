@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Калькулятор доставки</title>
 
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/customRange.css">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/customRange.css" />
 
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,31 +26,31 @@
         <article class="packageInfo container">
             <div class="weight">
                 <label for="weight" class="noselect">Вес (кг)</label>
-                <input class="inputNum" type="number" name="weight" id="weight" placeholder="1500">
+                <input class="inputNum input" type="number" name="weight" id="weight" placeholder="1500"/>
             </div>
             <div class="volume">
                 <label for="volume" class="noselect">Объем (куб²)</label>
-                <input class="inputNum" type="number" name="volume" id="volume" placeholder="2">
+                <input class="inputNum input" type="number" name="volume" id="volume" placeholder="2" />
             </div>
         </article>
         <article class="additionalOptions container">
             <div class="checkbox1">
-                <input class="custom-checkbox" type="checkbox" name="chb1" id="chb1">
+                <input class="custom-checkbox" type="checkbox" name="chb1" id="chb1" />
                 <label for="chb1" class="noselect">Нужна погрузка</label>
             </div>
             <div class="checkbox2">
-                <input class="custom-checkbox" type="checkbox" name="chb2" id="chb2">
+                <input class="custom-checkbox" type="checkbox" name="chb2" id="chb2" />
                 <label for="chb2" class="noselect">Доставка до места</label>
             </div>
             <div class="checkbox3">
-                <input class="custom-checkbox" type="checkbox" name="chb3" id="chb3">
+                <input class="custom-checkbox" type="checkbox" name="chb3" id="chb3" />
                 <label for="chb3" class="noselect">Хрупкий груз</label>
             </div>
         </article>
         <article class="distance container">
-            <label for="dist">Расстояние <input type="number" class="dist-numInput select-target" id="dist-numInput"
-                    min="10" max="10000"> км</label>
-            <input type="range" name="dist" id="dist" min="10" max="10000" step="10">
+            <label for="dist">Расстояние
+                <input type="number" class="dist-numInput  input" id="dist-numInput" min="10" max="10000" />км</label>
+            <input type="range" name="dist" id="dist" min="10" max="10000" step="10" />
         </article>
         <article class="price container">
             <div class="price-cont">
@@ -58,11 +58,11 @@
                 <button class="btn" id="btn">Считать</button>
             </div>
             <div class="clear-cont">
-                <button class="clear-btn">Очистить</button>
+                <button class="clear-btn btn">Очистить</button>
             </div>
         </article>
     </main>
-    <br>
+    <br />
     <script src="./js/script.js"></script>
 </body>
 
